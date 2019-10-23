@@ -1,15 +1,42 @@
 package exercise1;
 
-public class Employee {
-	public int computeSalary() {
-		return 0;
+public abstract class Employee
+{
+	private String name;
+	private int workedHours=0;
+	private int sales=0;
+	protected Employee(String name)
+	{
+		this.name=name;
+	}
+	public abstract int computeSalary();
+	//{
+		//return computeSalary;
+	//}
+
+	public void sell()
+	{
+		sales++;
+
+
+	}
+	protected int getSales(){
+		return sales;
 	}
 
-	public void sell() { }
+	public void workOneHour()
+	{
+		this.workedHours+=1:
+		//return hourRate*hours;
 
-	public void workOneHour() { }
+	}
+	public int getWorkedHours()
+	{
+		return workedHours;
+	}
 
-	public String getName() {
-		return null;
+	public String getName()
+	{
+		return name;
 	}
 }
